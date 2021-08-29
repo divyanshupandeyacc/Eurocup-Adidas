@@ -61,7 +61,7 @@ The temporary files such as distributables, documentation and tests results can 
 npm run clean
 ```
 
-### Additional confiuguration for Production deployments
+# Additional confiuguration for Production deployments
 
 ## Build for production
 ```
