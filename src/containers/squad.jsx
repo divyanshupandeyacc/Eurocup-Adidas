@@ -1,6 +1,7 @@
 // React imports
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import {
 	SelectionControl,
 	Divider,
@@ -45,6 +46,7 @@ const intitialStateForPlayersByPosition = {
 let teamsPlayerList = [];
 
 const SquadContainer = (props) => {
+	const history = useHistory();
 	const [isSubmitValid, setIsSubmitalid] = useState(false); // to check if all validation are set true
 	const [playerByPosition, setPlayersByPosition] = useState({
 		...intitialStateForPlayersByPosition,
@@ -106,6 +108,7 @@ const SquadContainer = (props) => {
 		});
 		dispatch(setTeamAction({ ...data, teams_list: mappedData }));
 		_cleanAllState();
+		history.push('/Team');
 	};
 
 	const handleReset = (event) => {

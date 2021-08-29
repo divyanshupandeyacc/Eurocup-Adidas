@@ -2,9 +2,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router';
 
 // App container
 const App = (props) => {
+	const history = useHistory();
 	const dispatch = useDispatch();
 	const userData = useSelector((state) => {
 		return state;
@@ -25,13 +27,21 @@ const App = (props) => {
 					{userData.userInfo.data && (
 						<div className='mock-content'>
 							<div className='row space-p-5 space-m-5'>
-								<div className='col-md-6 text-center'>
-									<div className='ad-link space-m-auto'>
+								<div className='col-md-6 text-center space-m-b-3'>
+									<div
+										className='ad-link space-m-auto'
+										onClick={(event) => {
+											history.push('/Squad');
+										}}>
 										<NavLink to='/Squad'>Squad</NavLink>
 									</div>
 								</div>
-								<div className='col-md-6 text-center'>
-									<div className='ad-link space-m-auto'>
+								<div className='col-md-6 text-center space-m-b-3'>
+									<div
+										className='ad-link space-m-auto'
+										onClick={(event) => {
+											history.push('/Leagues');
+										}}>
 										<NavLink to='/Leagues'>Leagues</NavLink>
 									</div>
 								</div>
