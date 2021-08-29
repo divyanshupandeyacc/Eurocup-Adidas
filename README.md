@@ -45,7 +45,11 @@ Tooling:
 [Jest][jest] is the tool used to run the tests suits
 
 ```
-npm run test or npm test 
+npm run test
+```
+or
+```
+npm test 
 ```
 
 The coverage is automatically created:
@@ -61,7 +65,7 @@ The temporary files such as distributables, documentation and tests results can 
 npm run clean
 ```
 
-### Additional confiuguration for Production deployments
+# Additional confiuguration for Production deployments
 
 ## Build for production
 ```
