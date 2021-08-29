@@ -1,30 +1,31 @@
-# test-app
+# Adidas-Euroup
 
-This is test app.
+This is React app with react redux eco system.
+This app has JEST test suit for UI and API validation.
 
-[adidas YARN Design System v2][yarn] is used as CSS design library, and tooling is based on [JS Build Tools][js-build-tools] packages.
+This application is build on [adidas YARN Design System v2][yarn], used as CSS design library, and tooling is based on [JS Build Tools][js-build-tools] packages.
 
 ## Requirements
-
-Tools to run the generator with their recommended versions:
+To run this application, Tools required to run the generator with their recommended versions:
 
 - NodeJS \>= 8
 - NPM \>= 5
 - Docker \>= 17
 
 ## Development
-
 The are several tools already set up to work in development mode.
+run the below command
+```
+npm install
+```
 
-### Build and serve
-
+### To Build and serve
 Build in development mode with the next features: dev server, file watcher and hot module replacement.
-
 ```
 npm start
 ```
-
-Will start webpack dev server on port `8080` with live reload.
+Will start webpack dev server on port `8080` with live reload. 
+Welcome to the adidas Eurocup - Home page
 
 ### Code linting
 
@@ -41,10 +42,10 @@ Tooling:
 
 ### Testing
 
-[Jest][jest] is the tool used to run the tests.
+[Jest][jest] is the tool used to run the tests suits
 
 ```
-npm run test
+npm run test or npm test 
 ```
 
 The coverage is automatically created:
@@ -55,25 +56,20 @@ The coverage is automatically created:
 Only unit tests are set up by default, to run other type of tests, you have to add NPM scripts and tooling/configurations.
 
 ### Clean temporary files
-
 The temporary files such as distributables, documentation and tests results can be removed with the `clean` task.
-
 ```
 npm run clean
 ```
 
-## Build for production
+### Additional confiuguration for Production deployments
 
+## Build for production
 ```
 npm run build
 ```
-
 Will produce minified distributables in `/dist` folder.
-
 ## Documentation
-
 The application documentation can be generated with the `doc` task using [JSDoc][jsdoc].
-
 ```
 npm run doc
 ```
