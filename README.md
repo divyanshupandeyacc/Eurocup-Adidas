@@ -45,7 +45,11 @@ Tooling:
 [Jest][jest] is the tool used to run the tests suits
 
 ```
-npm run test or npm test 
+npm run test
+```
+or
+```
+npm test 
 ```
 
 The coverage is automatically created:
