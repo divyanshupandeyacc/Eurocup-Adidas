@@ -1,0 +1,7 @@
+.env
+Jenkinsfile
+sonar-project.properties
+dist
+test
+node_modules
+*.log

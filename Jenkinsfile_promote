@@ -1,0 +1,44 @@
+@Library(['GlobalJenkinsLibrary@2', 'PlatformJenkinsLibrary']) _
+
+def envMap = [
+    develop: [
+        kubeconfig: 'k8s-secret',
+        clusterURL: 'dev-blue.he.k8s.emea.adsint.biz'
+    ]
+]
+
+env.K8S_NAMESPACE = 'test-app'
+
+String[] choices = envMap.keySet()
+
+node {
+    meta.pipelines.withDefaults([
+        parameters([
+            choice(
+                choices: choices,
+                description: 'Kubernetes environment to use',
+                name: 'K8S_ENV'
+            ),
+            string(
+                defaultValue: 'latest',
+                description: 'Tag to deploy',
+                name: 'TAG'
+            )
+        ])
+    ])
+
+    def environment = envMap[params.K8S_ENV]
+    def version = params.TAG
+
+    checkout scm
+
+    stage 'Promote', platform.k8sDeploy(
+        file: './deploy/all.yml',
+        branch: 'master',
+        credentials: environment.kubeconfig,
+        variables: [
+            "TAG=${version}",
+            "CLUSTER_URL=${environment.clusterURL}"
+        ]
+    )
+}

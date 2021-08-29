@@ -1,0 +1,10 @@
+{
+  "title": "Thank you for using adidas Frontend Generator",
+  "subtitle": "Please, follow the next instructions before coding:",
+  "doc": [
+    "<li class=\"list__item\">1. Read the <code class=\"space-m-h-1\">README.md</code> file and follow installation steps.</li>",
+    "<li class=\"list__item\">2. Add your favorite framework: <a class=\"space-m-h-1\" href=\"https://tools.adidas-group.co</li>m/confluence/display/DSBP/Frontend+Seed+-+React\">React</a> or <a class=\"space-m-h-1\" href=\"https://tools.adidas-group.com/confluence/display/DSBP/Frontend+Seed+-+Vue\">Vue</a> (optional).",
+    "<li class=\"list__item\">3. Update to latest version of <a class=\"space-m-h-1\" href=\"http://yarn.adidas.com/?path=/story/getting-started--about-yarn\">YARN core and libraries</a>.</li>",
+    "<li class=\"list__item\">4. Let's code!</li>"
+  ]
+}

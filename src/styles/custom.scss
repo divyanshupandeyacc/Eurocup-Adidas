@@ -1,0 +1,136 @@
+/* This is custom SCSS */
+
+$elementColor: rgba(255, 255, 255, 0.5); /* color same as .bg-brand-color-2 */
+$hoverColor: rgba(0, 0, 0, 0.35); /* color same as .bg-brand-color-3 */
+$fontFamily: 'yarn-heading';
+$textShadowColor: rgba(
+	255,
+	255,
+	255,
+	0.65
+); /* color same as .text-d-brand-color-65 */
+$textShadowColor: rgba(
+	255,
+	255,
+	255,
+	0.65
+); /* color same as .text-d-brand-color-65 */
+
+html {
+	box-sizing: content-box;
+	font-family: $fontFamily;
+	a {
+		&:hover {
+			color: beige;
+			text-decoration: none;
+			cursor: pointer;
+		}
+	}
+	.ad-wrapper-no-data {
+		color: $hoverColor;
+	}
+	.ad-background {
+		background-image: url('../assets/images/bg.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		object-fit: cover;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100vh;
+		overflow-y: scroll;
+	}
+	.ad-message {
+		font-size: 3em;
+		text-shadow: 0px 0px 8px $textShadowColor;
+	}
+
+	.signin-container {
+		background-image: url('../assets/images/bg.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		object-fit: cover;
+	}
+	.ad-notification-wrapper {
+		position: fixed;
+		width: 300px;
+		height: 58px;
+		bottom: 10px;
+		right: 7px;
+		z-index: 9999;
+		border-radius: 2px;
+		cursor: pointer;
+	}
+	main {
+		.container {
+			display: inline;
+			.ad-scroll {
+				height: 626px;
+				overflow-y: scroll;
+			}
+			.ad-loader {
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				z-index: 99999;
+				background: #e9e9e9;
+				height: 100%;
+				width: 100%;
+				opacity: 0.5;
+				.loader {
+					position: relative;
+					top: 50%;
+					margin: auto;
+				}
+			}
+			.ad-ground {
+				background-image: url('../assets/images/ground.png');
+				background-repeat: no-repeat;
+				background-repeat: no-repeat;
+				background-size: contain;
+				height: 626px;
+				object-fit: contain;
+				background-position: center;
+			}
+		}
+
+		.ad-wrapper-container {
+			.ad-link {
+				line-height: 100px;
+				text-align: center;
+				border: 1px solid $elementColor;
+				border-radius: 12px;
+				color: $elementColor;
+				box-shadow: 0px 0px 12px -1px $hoverColor;
+				&:hover {
+					box-shadow: 0px 0px 12px -1px $elementColor;
+					border-radius: 12px;
+					text-decoration: none;
+					cursor: pointer;
+				}
+				a {
+					color: #ffffff;
+					text-shadow: 0px 0px 8px $textShadowColor;
+					font-size: 2em;
+					&:hover {
+						color: #ffffff;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+
+	::-webkit-scrollbar {
+		width: 5px;
+		background-color: $textShadowColor;
+	}
+	::-webkit-scrollbar-thumb {
+		background: $hoverColor;
+		border-radius: 4px;
+	}
+}

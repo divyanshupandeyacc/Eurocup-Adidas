@@ -1,0 +1,66 @@
+kind: Deployment
+apiVersion: apps/v1beta1
+metadata:
+  name: test-app
+spec:
+  template:
+    metadata:
+      labels:
+        app: test-app
+    spec:
+      containers:
+      - name: test-app
+        image: registry.tools.adidas-group.com/1/test-app:$TAG
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 50m
+            memory: 256Mi
+          limits:
+            cpu: 1000m
+            memory: 256Mi
+      imagePullSecrets:
+      - name: dockercfg
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: test-app
+spec:
+  selector:
+    app: test-app
+  ports:
+    - name: http
+      port: 80
+  type: ClusterIP
+---
+kind: Ingress
+apiVersion: extensions/v1beta1
+metadata:
+  labels:
+    app: test-app
+  name: test-app
+spec:
+  rules:
+  - host: test-app.$CLUSTER_URL
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: test-app
+          servicePort: 80
+---
+kind: HorizontalPodAutoscaler
+apiVersion: autoscaling/v1
+metadata:
+  name: test-app
+spec:
+  scaleTargetRef:
+    kind: Deployment
+    apiVersion: apps/v1beta1
+    name: test-app
+  minReplicas: 1
+  maxReplicas: 3
+  targetCPUUtilizationPercentage: 60

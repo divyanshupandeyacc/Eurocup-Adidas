@@ -1,0 +1,37 @@
+# Untracked general purpose files:
+.idea
+.npmrc
+.eslintrc
+.vscode
+.project
+.sass-cache
+.settings
+*.bak
+*.bck
+*.log
+*.orig
+*.sublime-*
+*.tmp
+npm-debug*
+.env
+
+
+# Untracked general purpose directories:
+dist
+docs
+/node_modules
+tmp
+
+
+#production
+/build
+
+#testing
+/coverage
+
+# Untracked specific application files and directories:
+test/results
+
+#mics
+npm-debug.logs*
+

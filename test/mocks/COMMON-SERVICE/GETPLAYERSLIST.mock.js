@@ -1,0 +1,60 @@
+const mockPlayersListData = {
+	id: 18,
+	area: {
+		id: 2088,
+		name: 'Germany',
+	},
+	name: 'Borussia Mönchengladbach',
+	shortName: "M'gladbach",
+	tla: 'BMG',
+	crestUrl:
+		'https://upload.wikimedia.org/wikipedia/commons/8/81/Borussia_M%C3%B6nchengladbach_logo.svg',
+	address: 'Hennes-Weisweiler-Allee 1 Mönchengladbach 41179',
+	phone: '+49 (02161) 92930',
+	website: 'http://www.borussia.de',
+	email: 'info@borussia.de',
+	founded: 1900,
+	clubColors: 'Black / White / Green',
+	venue: 'Stadion im Borussia-Park',
+	squad: [
+		{
+			id: 3176,
+			name: 'Matthias Ginter',
+			position: 'Defender',
+			dateOfBirth: '1994-01-19T00:00:00Z',
+			countryOfBirth: 'Germany',
+			nationality: 'Germany',
+			role: 'PLAYER',
+		},
+		{
+			id: 3185,
+			name: 'Lars Stindl',
+			position: 'Midfielder',
+			dateOfBirth: '1988-08-26T00:00:00Z',
+			countryOfBirth: 'Germany',
+			nationality: 'Germany',
+			role: 'PLAYER',
+		},
+		{
+			id: 3470,
+			name: 'Yann Sommer',
+			position: 'Goalkeeper',
+			dateOfBirth: '1988-12-17T00:00:00Z',
+			countryOfBirth: 'Switzerland',
+			nationality: 'Switzerland',
+			role: 'PLAYER',
+		},
+		{
+			id: 3473,
+			name: 'Michael Lang',
+			position: 'Defender',
+			dateOfBirth: '1991-02-08T00:00:00Z',
+			countryOfBirth: 'Switzerland',
+			nationality: 'Switzerland',
+			role: 'PLAYER',
+		},
+	],
+	lastUpdated: '2018-06-23T12:50:44Z',
+};
+
+export default mockPlayersListData;

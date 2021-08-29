@@ -1,0 +1,23 @@
+{
+  "generator-frontend-seed": {
+    "projectName": "test-app",
+    "orgName": "1",
+    "projectDescription": "This is test app",
+    "projectRepository": "https://tools.adidas-group.com/bitbucket/projects/1/repos/test-app",
+    "sonarKey": "com.adidas.1.test-app",
+    "sonarName": "1-Test App",
+    "veracode": true,
+    "veracodeCredentials": "veracode-secret",
+    "language": "javascript",
+    "styles": "scss",
+    "deployment": "nginx",
+    "deploymentBranch": "master",
+    "dockerRegistry": "registry.tools.adidas-group.com",
+    "dockerProject": "1",
+    "dockerCredentials": "docker-secret",
+    "k8sNamespace": "test-app",
+    "k8sClusterUrl": "dev-blue.he.k8s.emea.adsint.biz",
+    "k8sCredentials": "k8s-secret",
+    "skipInstall": false
+  }
+}

@@ -1,0 +1,16 @@
+@Library('GlobalJenkinsLibrary@2') _
+
+node {
+    checkout scm
+
+    String projectName = tools.npm.getConfig 'name'
+    String commit = tools.git.getCommitId()
+
+    stage('Static scan') {
+        flows.veracode.javascriptStaticScan(
+            componentName: projectName,
+            scanName: "${projectName}-${commit}",
+            credentials: 'veracode-secret'
+        )
+    }
+}
